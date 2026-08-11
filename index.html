@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eshan's Portfolio – CS Student" />
+  <title>Eshan | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">eshan.</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hey, I'm</p>
+      <h1 class="hero-name">Eshan</h1>
+      <p class="hero-role">CS Student &amp; Developer</p>
+      <p class="hero-desc">I build things for the web and explore new technologies in my spare time.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a computer science student passionate about building software that solves real problems. I enjoy everything from web development to experimenting with machine learning projects.</p>
+          <p>When I'm not studying or coding, I like gaming, tinkering with hardware, and drinking way too much coffee.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🗂️</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">GitHub</a>
+              <a href="#" title="Live">Live</a>
+            </div>
+          </div>
+          <h3>Project One</h3>
+          <p>A short description of what this project does and what problem it solves.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Flask</span><span>SQLite</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🌐</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">GitHub</a>
+              <a href="#" title="Live">Live</a>
+            </div>
+          </div>
+          <h3>Project Two</h3>
+          <p>Another project description. Explain what you built and what you learned.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🤖</span>
+            <div class="project-links">
+              <a href="#" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Project Three</h3>
+          <p>A machine learning or data project description. Briefly mention the dataset and outcome.</p>
+          <div class="project-tags">
+            <span>Python</span><span>scikit-learn</span><span>Pandas</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>C++</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Web</h4>
+          <ul>
+            <li>HTML &amp; CSS</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Flask</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Tools</h4>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>VS Code</li>
+            <li>Linux</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Other</h4>
+          <ul>
+            <li>SQL</li>
+            <li>REST APIs</li>
+            <li>Machine Learning</li>
+            <li>Data Structures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="contact">
+    <div class="container contact-container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-desc">I'm open to internship opportunities, collaborations, or just a chat. Drop me a message!</p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="mailto:you@email.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed &amp; Built by Eshan &copy; 2025</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
