@@ -51,7 +51,7 @@ const sectionObs = new IntersectionObserver((entries) => {
       if (active) active.classList.add('active');
     }
   });
-}, { threshold: 0.35 });
+}, { rootMargin: "-30% 0px -69% 0px" });
 
 sections.forEach(s => sectionObs.observe(s));
 

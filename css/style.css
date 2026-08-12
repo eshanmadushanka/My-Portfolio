@@ -232,11 +232,13 @@ img { display: block; width: 100%; }
   text-transform: uppercase;
   letter-spacing: .1em;
   color: var(--label);
-  transition: color .2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--primary); }
-.nav-links a.active { border-bottom: 2px solid var(--primary); padding-bottom: 2px; }
+.nav-links a.active { border-bottom-color: var(--primary); }
 
 .nav-right { display: flex; align-items: center; gap: 12px; }
 
