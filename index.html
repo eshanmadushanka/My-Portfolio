@@ -1,189 +1,518 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eshan's Portfolio – CS Student" />
-  <title>Eshan | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Eshan — ICT Student & Developer at University of Vavuniya. Building tools, automations and real-world software."/>
+  <title>ESHAN — ICT Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Anton&family=Inter:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-logo">eshan.</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger">&#9776;</button>
-  </nav>
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar">
+    <a class="nav-logo" href="#home">ESHAN</a>
 
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">Hey, I'm</p>
-      <h1 class="hero-name">Eshan</h1>
-      <p class="hero-role">CS Student &amp; Developer</p>
-      <p class="hero-desc">I build things for the web and explore new technologies in my spare time.</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-      </div>
-    </div>
-    <div class="hero-art">
-      <div class="blob"></div>
-    </div>
-  </section>
+    <nav class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I'm a computer science student passionate about building software that solves real problems. I enjoy everything from web development to experimenting with machine learning projects.</p>
-          <p>When I'm not studying or coding, I like gaming, tinkering with hardware, and drinking way too much coffee.</p>
-        </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">3</span>
-            <span class="stat-label">Years Coding</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Technologies</span>
-          </div>
-        </div>
-      </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="material-symbols-outlined" id="themeIcon">light_mode</span>
+        <span class="theme-toggle__label" id="themeLabel">Light</span>
+      </button>
+      <a href="#contact" class="nav-cta">Contact</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile dropdown -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home">
+    <p class="hero-label">ICT Student &amp; Developer</p>
+    <h1 class="hero-headline">DIGITAL<br/>CRAFTSMAN</h1>
+    <p class="hero-body">
+      Building real tools — AI-powered desktop apps, automation scripts, mobile apps, and full-stack systems.
+      Bachelor of ICT student at the University of Vavuniya, Sri Lanka.
+    </p>
+    <div class="hero-actions">
+      <a href="#resume" class="btn btn-solid">View Resume</a>
+      <a href="#projects" class="btn btn-ghost">See Projects</a>
     </div>
   </section>
 
-  <section class="section section-dark" id="projects">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🗂️</span>
-            <div class="project-links">
-              <a href="#" title="GitHub">GitHub</a>
-              <a href="#" title="Live">Live</a>
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <p class="section-eyebrow">Work</p>
+    <div class="section-title-row">
+      <h2 class="t-headline">Selected Works</h2>
+      <p class="t-body muted" style="max-width:400px">
+        Personal projects built during my studies — tools I actually use or shipped for real.
+      </p>
+    </div>
+
+    <!-- Featured 2-column preview grid -->
+    <div class="work-grid">
+
+      <a href="#proj-bg" class="work-card work-card--main fade-up">
+        <div class="work-card__thumb">
+          <!-- TODO: replace with actual screenshot -->
+          <div class="img-placeholder">Add image: BG Remover</div>
+        </div>
+        <div class="work-card__meta">
+          <p class="work-card__year">2024 // Python &amp; AI</p>
+          <p class="t-subhead">BG Remover Local</p>
+        </div>
+      </a>
+
+      <a href="#proj-campus" class="work-card work-card--side fade-up" style="transition-delay:.1s">
+        <div class="work-card__thumb">
+          <!-- TODO: replace with actual screenshot -->
+          <div class="img-placeholder img-placeholder--sq">Add image: Campus System</div>
+        </div>
+        <div class="work-card__meta">
+          <p class="work-card__year">2024 // Full Stack</p>
+          <p class="t-subhead" style="font-size:20px">Smart Campus System</p>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Project rows — full detail -->
+
+    <div id="proj-bg" class="project-row fade-up">
+      <div class="project-row__img">
+        <div class="project-row__thumb">
+          <!-- TODO: replace with actual screenshot -->
+          <div class="img-placeholder">Add image: BG Remover</div>
+        </div>
+      </div>
+      <div class="project-row__info">
+        <p class="work-card__year">2024 // Python &amp; AI</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">BG Remover Local</h3>
+        <div class="project-row__section">
+          <p class="project-row__section-label">Problem</p>
+          <p class="t-body muted">Online tools upload your images to a server. No offline, free alternative existed that worked on Windows out of the box.</p>
+        </div>
+        <div class="project-row__section">
+          <p class="project-row__section-label">What I Built</p>
+          <p class="t-body muted">A fully local Python app using the rembg AI model. Drag an image in via a simple browser UI, get a clean PNG back. No API keys, no uploads, no internet needed.</p>
+        </div>
+        <div class="project-row__tags">
+          <span class="tag">Python</span>
+          <span class="tag">rembg</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Offline AI</span>
+        </div>
+        <a href="https://github.com/" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
+      </div>
+    </div>
+
+    <div id="proj-campus" class="project-row fade-up">
+      <div class="project-row__img">
+        <div class="project-row__thumb">
+          <!-- TODO: replace with actual screenshot -->
+          <div class="img-placeholder">Add image: Campus System</div>
+        </div>
+      </div>
+      <div class="project-row__info">
+        <p class="work-card__year">2024 // Full Stack</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">Smart Campus System</h3>
+        <div class="project-row__section">
+          <p class="project-row__section-label">Problem</p>
+          <p class="t-body muted">University resource tracking — rooms, timetables, staff — was handled via spreadsheets causing daily scheduling conflicts.</p>
+        </div>
+        <div class="project-row__section">
+          <p class="project-row__section-label">What I Built</p>
+          <p class="t-body muted">A full-stack web application for campus resource management — timetable generation, student records, and room allocation. Built as a team project.</p>
+        </div>
+        <div class="project-row__tags">
+          <span class="tag">Web</span>
+          <span class="tag">Database</span>
+          <span class="tag">CRUD</span>
+          <span class="tag">Team Project</span>
+        </div>
+        <a href="https://github.com/" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
+      </div>
+    </div>
+
+    <div id="proj-trace" class="project-row fade-up">
+      <div class="project-row__img">
+        <div class="project-row__thumb">
+          <!-- TODO: replace with actual screenshot -->
+          <div class="img-placeholder">Add image: TraceFlow</div>
+        </div>
+      </div>
+      <div class="project-row__info">
+        <p class="work-card__year">2024 // Mobile / Android</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">TraceFlow</h3>
+        <div class="project-row__section">
+          <p class="project-row__section-label">What I Built</p>
+          <p class="t-body muted">An Android app for offline workflow tracing and data logging. Runs entirely on-device with local storage — no server required. Published as a standalone APK.</p>
+        </div>
+        <div class="project-row__tags">
+          <span class="tag">Android</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">Local Storage</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="proj-auto" class="project-row fade-up">
+      <div class="project-row__img">
+        <div class="code-block" style="aspect-ratio:4/3;overflow:hidden">
+          <div class="code-dots">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+          </div>
+          <pre><code>import os, shutil, subprocess
+
+def clean_temp():
+    tmp = os.getenv('TEMP')
+    for f in os.listdir(tmp):
+        try:
+            shutil.rmtree(
+                os.path.join(tmp, f))
+        except: pass
+
+def run_task(cmd):
+    subprocess.run(
+        cmd, shell=True, check=True)
+
+if __name__ == "__main__":
+    clean_temp()
+    run_task("ipconfig /flushdns")</code></pre>
+        </div>
+      </div>
+      <div class="project-row__info">
+        <p class="work-card__year">2024 // Python</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">Automation Scripts</h3>
+        <div class="project-row__section">
+          <p class="project-row__section-label">Problem</p>
+          <p class="t-body muted">Repetitive system tasks — cleanup, file management, scheduled jobs — done by hand every week.</p>
+        </div>
+        <div class="project-row__section">
+          <p class="project-row__section-label">What I Built</p>
+          <p class="t-body muted">Two Python automation script collections — one for Windows, one for Linux. Temp cleanup, file organisation, task scheduling.</p>
+        </div>
+        <div class="project-row__tags">
+          <span class="tag">Python</span>
+          <span class="tag">Windows</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Scripting</span>
+        </div>
+        <a href="https://github.com/" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
+      </div>
+    </div>
+
+    <div id="proj-video" class="project-row fade-up">
+      <div class="project-row__img">
+        <div class="code-block" style="aspect-ratio:4/3;overflow:hidden">
+          <div class="code-dots">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+          </div>
+          <pre><code>import ffmpeg
+
+def cut_clip(src, start, end, out):
+    (ffmpeg
+      .input(src, ss=start, to=end)
+      .output(out)
+      .overwrite_output()
+      .run())
+
+def remove_silence(src, out,
+                   threshold=-40):
+    # Strip silent segments via
+    # silencedetect + trim filters
+    pass</code></pre>
+        </div>
+      </div>
+      <div class="project-row__info">
+        <p class="work-card__year">2024 // Python &amp; FFmpeg</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">Video Tools Suite</h3>
+        <div class="project-row__section">
+          <p class="project-row__section-label">What I Built</p>
+          <p class="t-body muted">A set of desktop video tools — a Short Video Cutter, a Video Editor, and an AI Story Cleaner that automatically strips silence and filler from recordings.</p>
+        </div>
+        <div class="project-row__tags">
+          <span class="tag">Python</span>
+          <span class="tag">FFmpeg</span>
+          <span class="tag">AI</span>
+          <span class="tag">Desktop</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <p class="section-eyebrow">About</p>
+    <h2 class="t-headline">About Me</h2>
+
+    <div class="about-grid">
+
+      <div>
+        <!-- TODO: replace src with your actual photo -->
+        <div class="img-placeholder" style="aspect-ratio:3/4">Add photo: Profile</div>
+      </div>
+
+      <div class="fade-up" style="transition-delay:.1s">
+        <div class="about-bio">
+          <p>I'm an ICT undergrad who spends most of his time building actual things. Not just assignments — tools I use, scripts that save me time, apps I wanted to exist.</p>
+          <p>My work ranges from a fully offline AI background remover to a campus management system. I like understanding how things work under the hood and shipping projects that solve real problems.</p>
+        </div>
+
+        <h3 class="t-subhead" style="margin:40px 0 24px">Education</h3>
+        <div class="edu-grid">
+          <div class="data-block">
+            <p class="data-label">University</p>
+            <p class="t-body" style="color:var(--primary);margin-top:4px;font-weight:600">University of Vavuniya</p>
+            <p class="t-body muted">Sri Lanka</p>
+          </div>
+          <div class="data-block">
+            <p class="data-label">Faculty</p>
+            <p class="t-body" style="color:var(--primary);margin-top:4px;font-weight:600">Faculty of Technological Studies</p>
+            <p class="t-body muted">Dept. of ICT</p>
+          </div>
+          <div class="data-block">
+            <p class="data-label">Degree</p>
+            <p class="t-body" style="color:var(--primary);margin-top:4px;font-weight:600">B.ICT — Software Technology</p>
+            <p class="t-body muted">Undergraduate</p>
+          </div>
+          <div class="data-block">
+            <p class="data-label">Graduation</p>
+            <p class="t-body" style="color:var(--primary);margin-top:4px;font-weight:600">Expected 2026</p>
+            <p class="t-body muted">Sri Lanka</p>
+          </div>
+        </div>
+
+        <div class="objectives">
+          <div class="obj-item">
+            <span class="material-symbols-outlined">terminal</span>
+            <div>
+              <p class="t-body" style="color:var(--primary);font-weight:600">Software Engineering</p>
+              <p class="t-body muted">Build robust tools that automate tedious work or solve genuine problems.</p>
             </div>
           </div>
-          <h3>Project One</h3>
-          <p>A short description of what this project does and what problem it solves.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Flask</span><span>SQLite</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🌐</span>
-            <div class="project-links">
-              <a href="#" title="GitHub">GitHub</a>
-              <a href="#" title="Live">Live</a>
+          <div class="obj-item">
+            <span class="material-symbols-outlined">auto_awesome</span>
+            <div>
+              <p class="t-body" style="color:var(--primary);font-weight:600">AI &amp; Automation</p>
+              <p class="t-body muted">Apply machine learning to real workflows — not just toy projects but things people actually run.</p>
             </div>
           </div>
-          <h3>Project Two</h3>
-          <p>Another project description. Explain what you built and what you learned.</p>
-          <div class="project-tags">
-            <span>React</span><span>Node.js</span><span>MongoDB</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🤖</span>
-            <div class="project-links">
-              <a href="#" title="GitHub">GitHub</a>
+          <div class="obj-item">
+            <span class="material-symbols-outlined">hub</span>
+            <div>
+              <p class="t-body" style="color:var(--primary);font-weight:600">Systems &amp; Infrastructure</p>
+              <p class="t-body muted">Understand how software runs in the real world — cloud, servers, networking.</p>
             </div>
           </div>
-          <h3>Project Three</h3>
-          <p>A machine learning or data project description. Briefly mention the dataset and outcome.</p>
-          <div class="project-tags">
-            <span>Python</span><span>scikit-learn</span><span>Pandas</span>
-          </div>
         </div>
-
       </div>
+
     </div>
   </section>
 
-  <section class="section" id="skills">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4>Languages</h4>
-          <ul>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>C++</li>
-            <li>Java</li>
-          </ul>
+
+  <!-- ===================== RESUME ===================== -->
+  <section id="resume">
+    <p class="section-eyebrow">Resume</p>
+    <h2 class="t-headline">Skills &amp; Experience</h2>
+
+    <div class="resume-grid">
+
+      <!-- Skills -->
+      <div class="fade-up">
+        <div class="skills-group">
+          <p class="skills-group-label">Languages</p>
+          <div class="pills">
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">HTML &amp; CSS</span>
+            <span class="pill">Java</span>
+            <span class="pill">C++</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Bash</span>
+          </div>
         </div>
-        <div class="skill-group">
-          <h4>Web</h4>
-          <ul>
-            <li>HTML &amp; CSS</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Flask</li>
-          </ul>
+        <div class="skills-group">
+          <p class="skills-group-label">Frameworks &amp; Tools</p>
+          <div class="pills">
+            <span class="pill">Git &amp; GitHub</span>
+            <span class="pill">VS Code</span>
+            <span class="pill">Linux</span>
+            <span class="pill">Android Studio</span>
+            <span class="pill">FFmpeg</span>
+            <span class="pill">Docker</span>
+          </div>
         </div>
-        <div class="skill-group">
-          <h4>Tools</h4>
-          <ul>
-            <li>Git &amp; GitHub</li>
-            <li>VS Code</li>
-            <li>Linux</li>
-            <li>Docker</li>
-          </ul>
+        <div class="skills-group">
+          <p class="skills-group-label">AI / ML</p>
+          <div class="pills">
+            <span class="pill">rembg</span>
+            <span class="pill">Transformers</span>
+            <span class="pill">scikit-learn</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">NumPy</span>
+          </div>
         </div>
-        <div class="skill-group">
-          <h4>Other</h4>
-          <ul>
-            <li>SQL</li>
-            <li>REST APIs</li>
-            <li>Machine Learning</li>
-            <li>Data Structures</li>
-          </ul>
+        <div class="skills-group">
+          <p class="skills-group-label">Soft Skills</p>
+          <div class="pills">
+            <span class="pill">Problem Solving</span>
+            <span class="pill">Team Collaboration</span>
+            <span class="pill">Self-Directed Learning</span>
+          </div>
         </div>
       </div>
+
+      <!-- Experience list -->
+      <div class="fade-up" style="transition-delay:.1s">
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-item__header">
+              <p class="exp-item__title">BG Remover Local</p>
+              <p class="exp-item__year">2024</p>
+            </div>
+            <p class="exp-item__sub">Python · AI · Offline App</p>
+            <p class="t-body muted">Local AI background removal. Runs entirely offline using rembg. Drag-and-drop browser UI, packaged for Windows.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-item__header">
+              <p class="exp-item__title">Smart Campus System</p>
+              <p class="exp-item__year">2024</p>
+            </div>
+            <p class="exp-item__sub">Full Stack · Database · Team</p>
+            <p class="t-body muted">Replaced spreadsheet-based campus management with a web system covering timetables, rooms, and student records.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-item__header">
+              <p class="exp-item__title">TraceFlow</p>
+              <p class="exp-item__year">2024</p>
+            </div>
+            <p class="exp-item__sub">Android · Mobile · Local Storage</p>
+            <p class="t-body muted">Android app for offline workflow tracing. Works fully on-device. Published as APK.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-item__header">
+              <p class="exp-item__title">Automation Scripts</p>
+              <p class="exp-item__year">2024</p>
+            </div>
+            <p class="exp-item__sub">Python · Windows · Linux</p>
+            <p class="t-body muted">Two separate automation script suites — Windows and Linux. Temp cleanup, file management, scheduled tasks.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-item__header">
+              <p class="exp-item__title">Video Tools Suite</p>
+              <p class="exp-item__year">2024</p>
+            </div>
+            <p class="exp-item__sub">Python · FFmpeg · AI</p>
+            <p class="t-body muted">Short Video Cutter, Video Editor, and AI Story Cleaner — strips silence and filler from recordings automatically.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section class="section section-dark" id="contact">
-    <div class="container contact-container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="contact-desc">I'm open to internship opportunities, collaborations, or just a chat. Drop me a message!</p>
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="t-headline">Get In Touch</h2>
+
+    <div class="contact-grid">
+
+      <div class="fade-up">
+        <p class="t-body muted" style="margin-bottom:40px;max-width:420px">
+          Open to internships, project collaborations, or just a conversation about ICT.
+          Drop a message and I'll get back to you.
+        </p>
+        <div>
+          <div class="ci-row">
+            <span class="t-label">Email</span>
+            <a href="mailto:eshan@example.com" class="t-body">eshan@example.com</a>
+          </div>
+          <div class="ci-row">
+            <span class="t-label">LinkedIn</span>
+            <a href="https://linkedin.com/" target="_blank" class="t-body">/in/eshan</a>
+          </div>
+          <div class="ci-row">
+            <span class="t-label">GitHub</span>
+            <a href="https://github.com/" target="_blank" class="t-body">/eshan</a>
+          </div>
+          <div class="ci-row">
+            <span class="t-label">University</span>
+            <span class="t-body" style="color:var(--label)">University of Vavuniya, SL</span>
+          </div>
         </div>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+      </div>
+
+      <form class="contact-form fade-up" style="transition-delay:.1s" id="contactForm">
+        <div class="ff">
+          <label class="t-label">Name</label>
+          <input type="text" required placeholder="Your name"/>
+        </div>
+        <div class="ff">
+          <label class="t-label">Email</label>
+          <input type="email" required placeholder="your@email.com"/>
+        </div>
+        <div class="ff">
+          <label class="t-label">Message</label>
+          <textarea rows="5" required placeholder="What's on your mind?"></textarea>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-solid" style="align-self:flex-start">
+          Send Message
+        </button>
       </form>
-      <div class="social-links">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-        <a href="mailto:you@email.com">Email</a>
-      </div>
+
     </div>
   </section>
 
-  <footer class="footer">
-    <p>Designed &amp; Built by Eshan &copy; 2025</p>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-brand">ESHAN</div>
+    <div class="footer-copy">© 2025 University of Vavuniya ICT Student</div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="mailto:eshan@example.com">Email</a>
+    </div>
   </footer>
 
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
+
 </body>
 </html>

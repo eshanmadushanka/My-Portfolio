@@ -1,50 +1,87 @@
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
+/* ============================================================
+   THEME TOGGLE
+============================================================ */
+const html       = document.documentElement;
+const toggle     = document.getElementById('themeToggle');
+const themeIcon  = document.getElementById('themeIcon');
+const themeLabel = document.getElementById('themeLabel');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+const saved = localStorage.getItem('portfolio-theme') || 'dark';
+setTheme(saved);
+
+toggle.addEventListener('click', () => {
+  const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+  localStorage.setItem('portfolio-theme', next);
 });
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-  });
-});
-
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.style.borderBottomColor = '#252525';
+function setTheme(t) {
+  html.dataset.theme = t;
+  if (t === 'light') {
+    themeIcon.textContent  = 'dark_mode';
+    themeLabel.textContent = 'Dark';
   } else {
-    navbar.style.borderBottomColor = 'transparent';
+    themeIcon.textContent  = 'light_mode';
+    themeLabel.textContent = 'Light';
   }
-});
+}
 
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+/* ============================================================
+   MOBILE MENU
+============================================================ */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => mobileMenu.classList.remove('open'))
+);
+
+/* ============================================================
+   ACTIVE NAV LINK ON SCROLL
+============================================================ */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => sectionObs.observe(s));
+
+/* ============================================================
+   SCROLL FADE-UP ANIMATION
+============================================================ */
+const fadeEls = document.querySelectorAll('.fade-up');
+
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      fadeObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+fadeEls.forEach(el => fadeObs.observe(el));
+
+/* ============================================================
+   CONTACT FORM
+============================================================ */
+document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = contactForm.querySelector('button[type="submit"]');
-  btn.textContent = 'Sent!';
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sent ✓';
   btn.disabled = true;
   setTimeout(() => {
     btn.textContent = 'Send Message';
     btn.disabled = false;
-    contactForm.reset();
+    e.target.reset();
   }, 3000);
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.project-card, .stat-card, .skill-group').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
 });
