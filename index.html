@@ -78,25 +78,23 @@
     <!-- Featured 2-column preview grid -->
     <div class="work-grid">
 
-      <a href="#proj-bg" class="work-card work-card--main fade-up">
+      <a href="#proj-gallery" class="work-card work-card--main fade-up">
         <div class="work-card__thumb">
-          <!-- TODO: replace with actual screenshot -->
-          <div class="img-placeholder">Add image: BG Remover</div>
+          <img src="assets/Image Prompt Web Site.png" alt="AI Image Gallery" class="grayscale"/>
         </div>
         <div class="work-card__meta">
-          <p class="work-card__year">2024 // Python &amp; AI</p>
-          <p class="t-subhead">BG Remover Local</p>
+          <p class="work-card__year">2024 // Web &amp; Supabase</p>
+          <p class="t-subhead">AI Image Gallery</p>
         </div>
       </a>
 
-      <a href="#proj-campus" class="work-card work-card--side fade-up" style="transition-delay:.1s">
+      <a href="#proj-video" class="work-card work-card--side fade-up" style="transition-delay:.1s">
         <div class="work-card__thumb">
-          <!-- TODO: replace with actual screenshot -->
-          <div class="img-placeholder img-placeholder--sq">Add image: Campus System</div>
+          <img src="assets/AI Story Telling Video Editer.png" alt="Video Tools Suite" class="grayscale"/>
         </div>
         <div class="work-card__meta">
-          <p class="work-card__year">2024 // Full Stack</p>
-          <p class="t-subhead" style="font-size:20px">Smart Campus System</p>
+          <p class="work-card__year">2024 // Python &amp; FFmpeg</p>
+          <p class="t-subhead" style="font-size:20px">Video Tools Suite</p>
         </div>
       </a>
 
@@ -104,57 +102,51 @@
 
     <!-- Project rows — full detail -->
 
-    <div id="proj-bg" class="project-row fade-up">
+    <div id="proj-gallery" class="project-row fade-up">
       <div class="project-row__img">
         <div class="project-row__thumb">
-          <!-- TODO: replace with actual screenshot -->
-          <div class="img-placeholder">Add image: BG Remover</div>
+          <img src="assets/Image Prompt Web Site.png" alt="AI Image Gallery" class="grayscale"/>
         </div>
       </div>
       <div class="project-row__info">
-        <p class="work-card__year">2024 // Python &amp; AI</p>
-        <h3 class="t-headline" style="margin:8px 0 24px">BG Remover Local</h3>
+        <p class="work-card__year">2024 // Web &amp; Supabase</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">AI Image Gallery</h3>
         <div class="project-row__section">
           <p class="project-row__section-label">Problem</p>
-          <p class="t-body muted">Online tools upload your images to a server. No offline, free alternative existed that worked on Windows out of the box.</p>
+          <p class="t-body muted">Needed a fast, static web gallery to showcase AI generated images with working authentication and community reactions.</p>
         </div>
         <div class="project-row__section">
           <p class="project-row__section-label">What I Built</p>
-          <p class="t-body muted">A fully local Python app using the rembg AI model. Drag an image in via a simple browser UI, get a clean PNG back. No API keys, no uploads, no internet needed.</p>
+          <p class="t-body muted">A static web gallery hosted on Vercel. Features Google OAuth login, Supabase integration for saving hearts/stars, and dynamic sorting based on community reactions.</p>
         </div>
         <div class="project-row__tags">
-          <span class="tag">Python</span>
-          <span class="tag">rembg</span>
-          <span class="tag">HTML/CSS</span>
-          <span class="tag">Offline AI</span>
+          <span class="tag">HTML/CSS/JS</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">OAuth</span>
+          <span class="tag">Vercel</span>
         </div>
-        <a href="https://github.com/" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
+        <a href="https://github.com/eshan/aiTestImage2" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
       </div>
     </div>
 
-    <div id="proj-campus" class="project-row fade-up">
+    <div id="proj-video" class="project-row fade-up">
       <div class="project-row__img">
         <div class="project-row__thumb">
-          <!-- TODO: replace with actual screenshot -->
-          <div class="img-placeholder">Add image: Campus System</div>
+          <img src="assets/AI Story Telling Video Editer.png" alt="Video Tools Suite" class="grayscale"/>
         </div>
       </div>
       <div class="project-row__info">
-        <p class="work-card__year">2024 // Full Stack</p>
-        <h3 class="t-headline" style="margin:8px 0 24px">Smart Campus System</h3>
-        <div class="project-row__section">
-          <p class="project-row__section-label">Problem</p>
-          <p class="t-body muted">University resource tracking — rooms, timetables, staff — was handled via spreadsheets causing daily scheduling conflicts.</p>
-        </div>
+        <p class="work-card__year">2024 // Python &amp; FFmpeg</p>
+        <h3 class="t-headline" style="margin:8px 0 24px">Video Tools Suite</h3>
         <div class="project-row__section">
           <p class="project-row__section-label">What I Built</p>
-          <p class="t-body muted">A full-stack web application for campus resource management — timetable generation, student records, and room allocation. Built as a team project.</p>
+          <p class="t-body muted">A set of desktop video tools — a Short Video Cutter, a Video Editor, and an AI Story Cleaner that automatically strips silence and filler from recordings.</p>
         </div>
         <div class="project-row__tags">
-          <span class="tag">Web</span>
-          <span class="tag">Database</span>
-          <span class="tag">CRUD</span>
-          <span class="tag">Team Project</span>
+          <span class="tag">Python</span>
+          <span class="tag">FFmpeg</span>
+          <span class="tag">AI</span>
+          <span class="tag">Desktop</span>
         </div>
         <a href="https://github.com/" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
       </div>
@@ -184,29 +176,8 @@
 
     <div id="proj-auto" class="project-row fade-up">
       <div class="project-row__img">
-        <div class="code-block" style="aspect-ratio:4/3;overflow:hidden">
-          <div class="code-dots">
-            <span class="code-dot"></span>
-            <span class="code-dot"></span>
-            <span class="code-dot"></span>
-          </div>
-          <pre><code>import os, shutil, subprocess
-
-def clean_temp():
-    tmp = os.getenv('TEMP')
-    for f in os.listdir(tmp):
-        try:
-            shutil.rmtree(
-                os.path.join(tmp, f))
-        except: pass
-
-def run_task(cmd):
-    subprocess.run(
-        cmd, shell=True, check=True)
-
-if __name__ == "__main__":
-    clean_temp()
-    run_task("ipconfig /flushdns")</code></pre>
+        <div class="project-row__thumb">
+          <img src="assets/Automation Script.png" alt="Automation Scripts" class="grayscale"/>
         </div>
       </div>
       <div class="project-row__info">
@@ -230,45 +201,7 @@ if __name__ == "__main__":
       </div>
     </div>
 
-    <div id="proj-video" class="project-row fade-up">
-      <div class="project-row__img">
-        <div class="code-block" style="aspect-ratio:4/3;overflow:hidden">
-          <div class="code-dots">
-            <span class="code-dot"></span>
-            <span class="code-dot"></span>
-            <span class="code-dot"></span>
-          </div>
-          <pre><code>import ffmpeg
 
-def cut_clip(src, start, end, out):
-    (ffmpeg
-      .input(src, ss=start, to=end)
-      .output(out)
-      .overwrite_output()
-      .run())
-
-def remove_silence(src, out,
-                   threshold=-40):
-    # Strip silent segments via
-    # silencedetect + trim filters
-    pass</code></pre>
-        </div>
-      </div>
-      <div class="project-row__info">
-        <p class="work-card__year">2024 // Python &amp; FFmpeg</p>
-        <h3 class="t-headline" style="margin:8px 0 24px">Video Tools Suite</h3>
-        <div class="project-row__section">
-          <p class="project-row__section-label">What I Built</p>
-          <p class="t-body muted">A set of desktop video tools — a Short Video Cutter, a Video Editor, and an AI Story Cleaner that automatically strips silence and filler from recordings.</p>
-        </div>
-        <div class="project-row__tags">
-          <span class="tag">Python</span>
-          <span class="tag">FFmpeg</span>
-          <span class="tag">AI</span>
-          <span class="tag">Desktop</span>
-        </div>
-      </div>
-    </div>
 
   </section>
 
