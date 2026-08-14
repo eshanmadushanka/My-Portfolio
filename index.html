@@ -71,7 +71,7 @@
       Bachelor of ICT student at the University of Vavuniya, Sri Lanka.
     </p>
     <div class="hero-actions">
-      <a href="#resume" class="btn btn-solid">Download CV</a>
+      <a href="assets/Eshan_Madushanka_CV.pdf" download class="btn btn-solid">Download CV</a>
       <a href="#projects" class="btn btn-ghost">See Projects</a>
     </div>
   </section>
@@ -92,11 +92,11 @@
 
       <a href="#proj-gallery" class="work-card work-card--main fade-up">
         <div class="work-card__thumb">
-          <img src="assets/Image Prompt Web Site.png" alt="AI Image Gallery" class="grayscale"/>
+          <img src="assets/Image Prompt Web Site.png" alt="AI Prompt Image Gallery" class="grayscale"/>
         </div>
         <div class="work-card__meta">
           <p class="work-card__year">2024 // Web &amp; Supabase</p>
-          <p class="t-subhead">AI Image Gallery</p>
+          <p class="t-subhead">AI Prompt Image Gallery</p>
         </div>
       </a>
 
@@ -122,14 +122,14 @@
       </div>
       <div class="project-row__info">
         <p class="work-card__year">2024 // Web &amp; Supabase</p>
-        <h3 class="t-headline" style="margin:8px 0 24px">AI Image Gallery</h3>
+        <h3 class="t-headline" style="margin:8px 0 24px">AI Prompt Image Gallery</h3>
         <div class="project-row__section">
           <p class="project-row__section-label">Problem</p>
-          <p class="t-body muted">Needed a fast, static web gallery to showcase AI generated images with working authentication and community reactions.</p>
+          <p class="t-body muted">I couldn't find a reliable AI image prompt website on the internet, so I built my own to solve that problem.</p>
         </div>
         <div class="project-row__section">
           <p class="project-row__section-label">What I Built</p>
-          <p class="t-body muted">A static web gallery hosted on Vercel. Features Google OAuth login, Supabase integration for saving hearts/stars, and dynamic sorting based on community reactions.</p>
+          <p class="t-body muted">A collection of image prompts and their corresponding output images, making it easy to discover and reuse prompts.</p>
         </div>
         <div class="project-row__tags">
           <span class="tag">HTML/CSS/JS</span>
@@ -137,7 +137,10 @@
           <span class="tag">OAuth</span>
           <span class="tag">Vercel</span>
         </div>
-        <a href="https://github.com/eshanmadushanka/AIPromptWebSite" target="_blank" class="btn btn-ghost" style="margin-top:28px">GitHub ›</a>
+        <div style="display: flex; gap: 12px; margin-top: 28px;">
+          <a href="https://github.com/eshanmadushanka/AIPromptWebSite" target="_blank" class="btn btn-ghost">GitHub ›</a>
+          <a href="https://ai-test-image2.vercel.app/" target="_blank" class="btn btn-solid">View Live Site ›</a>
+        </div>
       </div>
     </div>
 
@@ -225,8 +228,9 @@
     <div class="about-grid">
 
       <div>
-        <!-- TODO: replace src with your actual photo -->
-        <div class="img-placeholder" style="aspect-ratio:3/4">Add photo: Profile</div>
+        <div style="overflow: hidden; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; padding: 64px;">
+          <img src="assets/my_image.png" alt="Eshan Madushanka" style="width: 100%; height: 100%; object-fit: contain;"/>
+        </div>
       </div>
 
       <div class="fade-up" style="transition-delay:.1s">
