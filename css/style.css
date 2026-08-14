@@ -548,8 +548,8 @@ footer {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: block; }
   .nav-right { gap: 8px; }
-
-  .hero-headline { font-size: clamp(56px, 18vw, 110px); }
+  .hero-headline { font-size: clamp(56px, 18vw, 110px); line-height: 1; }
+  #home { justify-content: flex-start; padding-top: 110px; }
   .work-grid { grid-template-columns: 1fr; }
 
   .project-row { grid-template-columns: 1fr; gap: 28px; }
