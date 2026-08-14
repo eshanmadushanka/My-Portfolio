@@ -1,10 +1,8 @@
 /* ============================================================
    THEME TOGGLE
 ============================================================ */
-const html       = document.documentElement;
-const toggle     = document.getElementById('themeToggle');
-const themeIcon  = document.getElementById('themeIcon');
-const themeLabel = document.getElementById('themeLabel');
+const html   = document.documentElement;
+const toggle = document.getElementById('themeToggle');
 
 const saved = localStorage.getItem('portfolio-theme') || 'dark';
 setTheme(saved);
@@ -17,13 +15,7 @@ toggle.addEventListener('click', () => {
 
 function setTheme(t) {
   html.dataset.theme = t;
-  if (t === 'light') {
-    themeIcon.textContent  = 'dark_mode';
-    themeLabel.textContent = 'Dark';
-  } else {
-    themeIcon.textContent  = 'light_mode';
-    themeLabel.textContent = 'Light';
-  }
+  toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 }
 
 /* ============================================================

@@ -29,9 +29,21 @@
     </nav>
 
     <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="material-symbols-outlined" id="themeIcon">light_mode</span>
-        <span class="theme-toggle__label" id="themeLabel">Light</span>
+      <!-- Pill theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <span class="tt-track">
+          <!-- Dark mode decorations -->
+          <span class="tt-star tt-star--1"></span>
+          <span class="tt-star tt-star--2"></span>
+          <span class="tt-star tt-star--3"></span>
+          <span class="tt-star tt-star--4"></span>
+          <!-- Light mode decoration -->
+          <span class="tt-bubble"></span>
+          <!-- The knob -->
+          <span class="tt-knob">
+            <span class="tt-knob-inner"></span>
+          </span>
+        </span>
       </button>
       <a href="#contact" class="nav-cta">Contact</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -59,7 +71,7 @@
       Bachelor of ICT student at the University of Vavuniya, Sri Lanka.
     </p>
     <div class="hero-actions">
-      <a href="#resume" class="btn btn-solid">View Resume</a>
+      <a href="#resume" class="btn btn-solid">Download CV</a>
       <a href="#projects" class="btn btn-ghost">See Projects</a>
     </div>
   </section>
