@@ -121,8 +121,8 @@ function stopAutoScroll() {
 function resetIdleTimer() {
   stopAutoScroll();
   clearTimeout(idleTimer);
-  // Wait 10 seconds before starting auto-scroll
-  idleTimer = setTimeout(startAutoScroll, 10000); 
+  // Wait 1 minute before starting auto-scroll
+  idleTimer = setTimeout(startAutoScroll, 60000); 
 }
 
 // Listen to any actual user interaction (we exclude 'scroll' so our auto-scroll doesn't cancel itself)
