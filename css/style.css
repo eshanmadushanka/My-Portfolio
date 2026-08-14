@@ -551,7 +551,6 @@ footer {
 
   .hero-headline { font-size: clamp(56px, 18vw, 110px); }
   .work-grid { grid-template-columns: 1fr; }
-  .work-card--side .work-card__thumb { aspect-ratio: 4/3; }
 
   .project-row { grid-template-columns: 1fr; gap: 28px; }
   .project-row:nth-child(even) .project-row__img,
